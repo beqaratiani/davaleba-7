@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(107, 159, 255);
+  height: 100vh;
+  overflow: hidden;
+  animation: bg-color 6s forwards;
+  animation-delay: 1s;
+}
+
+.trees {
+  position: absolute;
+  bottom: 0;
+  height: 310.44px;
+}
+
+.trees img {
+  width: 100%;
+}
+
+.sun {
+  background-color: #ff8c1a;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  animation: sunset 6s forwards;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+  box-shadow: 0 0 20px 5px #ff8c1a;
+}
+
+.stars {
+  opacity: 0;
+  animation: stars-appear 2s forwards;
+  animation-delay: 6s;
+  animation: stars-shining 3s infinite;
+  animation-delay: 6s;
+}
+
+.stars-image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+@keyframes sunset {
+  100% {
+    transform: translateY(800px);
+  }
+}
+
+@keyframes bg-color {
+  0% {
+    background-color: rgb(107, 159, 255);
+  }
+  50% {
+    background-color: #ffd700;
+  }
+  100% {
+    background-color: rgb(58, 58, 58);
+  }
+}
+
+@keyframes stars-appear {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes stars-shining {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
